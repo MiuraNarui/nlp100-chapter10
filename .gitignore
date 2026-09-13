@@ -216,3 +216,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# NLP100 datasets
+/data/
+
+# Fine-tuning outputs
+/out_98/
+/fine_tuned_model_98/
+/out_99/
+/preference_tuned_model_99/
+
+# Other training outputs
+/results/
+/logs/
+/wandb/
+
+# macOS
+.DS_Store

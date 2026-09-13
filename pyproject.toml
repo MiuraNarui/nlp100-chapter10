@@ -1,0 +1,27 @@
+[project]
+name = "nlp100-chapter10"
+version = "0.1.0"
+description = "NLP 100 Knocks 2025 - Chapter 10"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers>=4.46,<5",
+    "accelerate",
+    "datasets",
+    "huggingface-hub",
+    "peft",
+    "trl",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+]
+
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
