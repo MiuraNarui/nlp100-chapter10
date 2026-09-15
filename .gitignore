@@ -233,3 +233,9 @@ __marimo__/
 
 # macOS
 .DS_Store
+
+# Presentation training outputs
+/out_98_presentation/
+/fine_tuned_model_98_presentation/
+/out_99_presentation/
+/preference_tuned_model_99_presentation/

@@ -1,0 +1,51 @@
+{
+  "problem": 99,
+  "method": "DPO + LoRA",
+  "base_model": "meta-llama/Llama-3.2-1B-Instruct",
+  "training": {
+    "problem": 99,
+    "method": "DPO + LoRA",
+    "base_model": "meta-llama/Llama-3.2-1B-Instruct",
+    "dataset": "SST-2",
+    "seed": 42,
+    "training_conditions": {
+      "train_samples": 67349,
+      "epochs": 1,
+      "learning_rate": 0.0002,
+      "per_device_train_batch_size": 4,
+      "gradient_accumulation_steps": 8,
+      "effective_batch_size": 32,
+      "max_length": 256,
+      "beta": 0.1,
+      "precision": "bfloat16"
+    },
+    "lora": {
+      "r": 16,
+      "alpha": 32,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "v_proj"
+      ]
+    },
+    "training_results": {
+      "train_loss": 0.15068102236881392,
+      "train_runtime_sec": 2065.4141,
+      "reward_accuracy": 0.9671052631578947,
+      "reward_margin": 4.648275701623214
+    },
+    "saved_model": "preference_tuned_model_99_presentation"
+  },
+  "evaluation": {
+    "dataset": "SST-2",
+    "split": "dev",
+    "samples": 872,
+    "batch_size": 16,
+    "max_length": 256,
+    "max_new_tokens": 4,
+    "decoding": "greedy",
+    "correct": 832,
+    "accuracy": 0.9541284403669725,
+    "unknown": 3
+  }
+}
