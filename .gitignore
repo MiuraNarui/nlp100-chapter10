@@ -239,3 +239,97 @@ __marimo__/
 /fine_tuned_model_98_presentation/
 /out_99_presentation/
 /preference_tuned_model_99_presentation/
+
+# API key
+.env
+
+# =========================
+# Presentation workspaces
+# =========================
+
+# Old / intermediate presentation folders
+/presentation/
+/presentation_01/
+
+# Ignore everything in presentation_02 by default
+/presentation_02/*
+
+# -------------------------
+# Keep selected source code
+# -------------------------
+!/presentation_02/evaluate_98_sst2_dev_root_best.py
+!/presentation_02/optimize_98_textgrad_prompt_llama_root_only.py
+!/presentation_02/optimize_98_textgrad_rationale_root_separated_prompt.py
+
+# -------------------------
+# Keep selected final results
+# -------------------------
+!/presentation_02/result/
+/presentation_02/result/*
+
+!/presentation_02/result/textgrad_rationale_llama32_1b_rationale_first_distill_exact_root_single_pool_separated_prompt_label_primary_v3/
+/presentation_02/result/textgrad_rationale_llama32_1b_rationale_first_distill_exact_root_single_pool_separated_prompt_label_primary_v3/*
+
+!/presentation_02/result/textgrad_rationale_llama32_1b_rationale_first_distill_exact_root_single_pool_separated_prompt_label_primary_v3/config.json
+!/presentation_02/result/textgrad_rationale_llama32_1b_rationale_first_distill_exact_root_single_pool_separated_prompt_label_primary_v3/prompts.jsonl
+!/presentation_02/result/textgrad_rationale_llama32_1b_rationale_first_distill_exact_root_single_pool_separated_prompt_label_primary_v3/prompt_metrics.jsonl
+!/presentation_02/result/textgrad_rationale_llama32_1b_rationale_first_distill_exact_root_single_pool_separated_prompt_label_primary_v3/textual_gradients.jsonl
+
+# =========================
+# Python / cache
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# macOS
+# =========================
+.DS_Store
+
+# =========================
+# Training / model outputs
+# =========================
+*.safetensors
+training_args.bin
+checkpoint-*/
+**/checkpoint-/
+
+# Hugging Face generated files
+adapter_config.json
+special_tokens_map.json
+tokenizer_config.json
+tokenizer.json
+chat_template.jinja
+
+# =========================
+# Large experiment logs
+# =========================
+**/predictions.jsonl
+**/judgments.jsonl
+**/api_responses.jsonl
+**/api_usage.csv
+
+# =========================
+# Common experiment folders
+# =========================
+wandb/
+runs/
+outputs/
+.cache/
+
+# Fine-tuned model outputs
+/fine_tuned_model_98_baseline/
+/fine_tuned_model_98_detailed_instruction/
+/fine_tuned_model_98_domain_aware/
+/fine_tuned_model_98_system_user/
+/fine_tuned_model_98_textgrad/
+/fine_tuned_model_98_textgrad_prompt_design/
+/fine_tuned_model_98_textgrad_tree/
